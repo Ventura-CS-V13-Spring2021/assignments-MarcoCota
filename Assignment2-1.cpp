@@ -20,4 +20,5 @@ int main()
         else // num2 =< num3 
             cout << "num3 is the greatest" << endl;
     }
+    return 0;
 }
