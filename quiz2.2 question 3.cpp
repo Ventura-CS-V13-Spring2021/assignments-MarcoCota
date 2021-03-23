@@ -17,6 +17,17 @@ int main()
             cout << "int1 and in2 are duplicates" << endl;
     }
     else 
-    
+    { 
+        if (int2 == int3)
+            cout << "int2 and int3 are the same" << endl;
+          // int1 is not equal to int3
+        else if (int1 == int3)
+            cout << "int1 and int3 are the same" << endl;
+          // num1 is not equal to int2
+        else
+            cout <<"There are no duplicates integers" << endl;            
+    }
+    return 0;
+}
     
 
