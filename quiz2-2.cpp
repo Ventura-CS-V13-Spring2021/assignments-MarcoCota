@@ -1,9 +1,4 @@
-#include <iosstream>
-#include <ctime>
+#include <iosstream
 
 using namespace std;
 
-int main()
-{
-    srand(time(NULL));
-    
