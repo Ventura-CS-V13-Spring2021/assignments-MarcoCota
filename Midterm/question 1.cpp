@@ -16,23 +16,31 @@ int main()
         exit(1); // stops program when 1 error occurs
     }
     
+    int above80 = 0; // variable to take averages above 80
+    
     string name;
-    infile >> name; // takes students name 
-    cout <<  "Student name :" << name; // prints out students name 
+    while (infile >> name) // takes students name
+    { 
+        
+        cout <<  "Student name :" << name; // prints out students name 
     
     
+        int x, y;
     
-    int x, y;
+        infile >> x >> y; // takes in two test values for each student
     
-    infile >> x >> y; // takes in two test values for each student
+        cout << "\tnum1 :" << x;
+        cout << "\tnum2 :" << y;
     
-    cout << "num1 :" << x << endl;
-    cout << "num2 :" << y << endl;
+        int result = x + y;
+        double average = result / 2.0; // divides both scores to get average
+        cout << "\tsum :" << result;
     
-    int result = x + y
-    double average = result / 2.0;
+        if (average >80) // determins if average is above 80
+        above80 ++; // if above 80 adds 1 student to the total
+        cout << "\tAvg :" << average << endl;
+    }
+    cout << "Average > 80 :" << above80 << " students" << endl;
     
-    if 
-
     return 0;
 }
