@@ -15,3 +15,9 @@ int main()
     num2 = getRdnum();
     num3 = getRdnum();
 }
+int getRdnum(void)
+{
+    int value; 
+    value = rand() % 10;  // selects a random number from 0 to 9
+    return value;
+}
