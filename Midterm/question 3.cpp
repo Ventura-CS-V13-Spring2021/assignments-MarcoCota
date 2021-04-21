@@ -6,16 +6,14 @@ using namespace std;
 int getRdnum(void);
 int findMin(int num1, int num2, int num3);
 int findMax(int num1, int num2, int num3);
-int getDifference(int min, intmax);
-void fileWrite(ofstream outfile, int difference);
+int getDifference(int min, int max);
+void fileWrite(int difference);
 
 
 int main()
 {
     int num1, num2, num3; // creates 3 variables to hold an integer
-    int min, max;
-    ofstream outfile;
-    outfile.open("question3.txt"); // interacts with numbers text file
+    int min, max, difference;
     
     do
     {
@@ -23,12 +21,11 @@ int main()
         num2 = getRdnum();
         num3 = getRdnum();
         min = findMin(num1, num2, num3);
-        max = findMax(num1, num2, num3)
-        
+        max = findMax(num1, num2, num3);
+        difference = getDifference(min, max);
+        fileWrite(difference);
     }
-    while (getDifference(min, max) >=3)
-    
-    outfile.close();
+    while (difference >=3)
     
     return 0;
 }
@@ -76,7 +73,10 @@ int getDifference(int min, int max) // finds the difference between max and min
     return difference;
 }
 
-void fileWrite(ofstream outfile, int difference) // writes the difference into the file
+void fileWrite(int difference) // writes the difference into the file
 {
+    ofstream outfile;
+    outfile.open("question3.txt"); // interacts with numbers text file
     outfile << "difference between min and max :" << difference << endl;
+    outfile.close();
 }
