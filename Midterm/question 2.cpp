@@ -12,5 +12,17 @@ int main()
     for (int i = 0; i < 10; i++) // prints 10 numbers at random 
     {
         value = getRdnum();
-        outfile << i << " " << value << endl;
+        outfile << i << " " << value << endl; 
     }
+
+    outfile.close();
+    
+    return 0;
+}
+
+int getRdnum(void)
+{
+    int value; 
+    value = rand() % 50 + 1;  
+        return value;
+}
