@@ -25,7 +25,7 @@ int main()
         difference = getDifference(min, max);
         fileWrite(difference);
     }
-    while (difference >=3)
+    while (difference >=3);
     
     return 0;
 }
