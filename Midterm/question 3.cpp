@@ -7,7 +7,7 @@ int getRdnum(void);
 int findMin(int num1, int num2, int num3);
 int findMax(int num1, int num2, int num3);
 int getDifference(int min, intmax);
-void fileWrite(int difference);
+void fileWrite(ofstream outfile, int difference);
 
 
 int main()
@@ -24,6 +24,7 @@ int main()
         num3 = getRdnum();
         min = findMin(num1, num2, num3);
         max = findMax(num1, num2, num3)
+        
     }
     while (getDifference(min, max) >=3)
     
@@ -69,8 +70,13 @@ int findMax(int num1, int num2, int num3) // determines which num is the max val
   return max;
 }
 
-int getDifference(int min, int max)
+int getDifference(int min, int max) // finds the difference between max and min
 {
     int difference = max - min;
     return difference;
+}
+
+void fileWrite(ofstream outfile, int difference) // writes the difference into the file
+{
+    outfile << "difference between min and max :" << difference << endl;
 }
