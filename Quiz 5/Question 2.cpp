@@ -35,7 +35,7 @@ void findmatchnum(int num1[], int size1, int num2[], int size2)
     int match = 0;
     for(int i=0; i<size1; i++) // takes in first array so that it goes through each element
     {   
- int =        for(int j=0; j<size2; j++) // takes in second array so that it goes through each element
+ int       for(int j=0; j<size2; j++) // takes in second array so that it goes through each element
         {
             if(num1[i] == num2[j])   // takes in both sets of elements from both arrays to find a match
             {

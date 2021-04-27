@@ -26,5 +26,14 @@ void printbinary(int num[], int size)
 }
 void count0cluster(int bin[], int size)
 {
+    int cluster = 0
+    for(int i=0; i<size; i++) // takes into account for array named size
+    {
+        if(bin[i] == 0) // checks if element in array is equal to 0
+        {
+            cluster++; // adds a cluster if line 32 is true 
+        }
+    }
+    cout << "There are " << cluster << " clusters" << endl;
   
 }
