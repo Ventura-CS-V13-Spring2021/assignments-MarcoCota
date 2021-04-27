@@ -13,4 +13,11 @@ int main()
         sum += numbers[i];
     }
     cout << endl;
+    for (int i = 0; i<SIZE; i++ )  // takes elements in the array
+    {
+        diff[i] = sum - numbers[i]; // takes elements in the array and subtractions them from the sum in the prior forloop
+        cout << diff[i] << " "; // prints out each sum from the diff of each element.
+    }
+    return 0;
+}
 
