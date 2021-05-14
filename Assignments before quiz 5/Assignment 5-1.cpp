@@ -21,3 +21,8 @@ int main()
     }
     
     cout << endl << "Sum of all the elements: " << nSum << endl;
+  
+    avg = nSum / float(N); //this gets the average of the elements within array and the float doesn't make N a float perm just temp
+    cout << "The average of the elements: " << avg << endl;
+    return 0;
+}
