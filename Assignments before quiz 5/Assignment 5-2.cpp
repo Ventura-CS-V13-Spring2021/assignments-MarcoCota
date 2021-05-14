@@ -12,3 +12,13 @@ int main()
     
 void makearray(int n[], int N); 
 {
+  int MAX = 100;
+    srand(time(NULL)); // allows code to provide random elements each time
+    for (int i = 0; i<N; i++ )
+    {
+        n[i] = rand() % MAX;
+    }
+}
+
+void printarray(int n[], int N); 
+{
