@@ -26,5 +26,7 @@ int main()
         }
     }
     
-    
+    count++;
+    cout << setw(3) << array[N-1] << setw(4) << count << endl; // sets distance of width 3 and prints out the lowest integer with it's count 
+    return 0;
 }
