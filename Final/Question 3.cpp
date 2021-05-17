@@ -41,13 +41,24 @@ Student &Student::operator=(Student &rhs)
     }
 }
 
-void Student::inputClass(string n, int num) 
+void Student::inputClass(string n, int num)
 {
-  name = n;
+    name = n;
     num_classes = num;
     class_list = new string[num];
     for (int i = 0; i < num_classes; i++)
     {
-        cout << class_list[i] << endl;
+        cout << "Enter the course name : ";
+        cin >> class_list[i];
     }
 }
+
+void Student::resetClass()
+{
+    num_classes = 0;
+    delete[] class_list;
+    class_list = NULL;
+}
+
+void Student::printAll() const
+{
