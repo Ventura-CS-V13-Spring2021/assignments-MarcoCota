@@ -4,7 +4,7 @@
 
 Student::Student(string n, int num)
 {
-    name = n;
+    name = n; 
     num_classes = num;
     class_list = new string[num];
     for (int i = 0; i < num_classes; i++)
@@ -14,3 +14,9 @@ Student::Student(string n, int num)
     }
 }
 
+Student::Student(Student &rhs)
+{
+    name = rhs.name;
+    num_classes = rhs.[num_classes];
+    class_list = new string[num_classes];
+    for 

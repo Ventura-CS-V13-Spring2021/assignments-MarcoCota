@@ -18,7 +18,7 @@ public:
     void inputClass(string n, int num);
     void resetClass();
     void printAll() const;
-    string getName const;
+    string getName() const;
     int getNumclasses() const;
 };
 
