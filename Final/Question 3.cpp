@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "LinkedList.h"
+#include "Student.h"
 
 Student::Student(string n, int num)
 {
@@ -17,6 +17,14 @@ Student::Student(string n, int num)
 Student::Student(Student &rhs)
 {
     name = rhs.name;
-    num_classes = rhs.[num_classes];
+    num_classes = rhs.num_classes;
     class_list = new string[num_classes];
-    for 
+    for (int i = 0; i < num_classes; i++)
+    {
+        class_list[i] = rhs.class_list[i];
+    }
+}
+Student::~Student()
+{
+    delete[] class_list;
+}
