@@ -4,17 +4,33 @@
 
 Student::Student(string n, int num)
 {
-    name = n; 
+    name = n; // allows student information to be entered
     num_classes = num;
     class_list = new string[num];
     for (int i = 0; i < num_classes; i++)
     {
-        cout << "Enter the course name : ";
-        cin >> class_list[i];
+        cout << "Enter the course name : "; // asks user for each of the classes and its name
+        cin >> class_list[i]; // inputs information entered
     }
 }
 
 Student::Student(Student &rhs)
+{
+    name = rhs.name;  // copies down information of student selected
+    num_classes = rhs.num_classes;
+    class_list = new string[num_classes];
+    for (int i = 0; i < num_classes; i++) // copies down students class information
+    {
+        class_list[i] = rhs.class_list[i];
+    }
+}
+
+Student::~Student()
+{
+    delete[] class_list; // erases the class list that was input 
+}
+
+Student &Student::operator=(Student &rhs)
 {
     name = rhs.name;
     num_classes = rhs.num_classes;
@@ -24,7 +40,6 @@ Student::Student(Student &rhs)
         class_list[i] = rhs.class_list[i];
     }
 }
-Student::~Student()
+
+void Student::inputClass(string n, int num)
 {
-    delete[] class_list;
-}
