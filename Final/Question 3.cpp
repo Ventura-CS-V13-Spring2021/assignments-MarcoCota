@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Student.h"
+using namespace std;
 
 Student::Student(string n, int num)
 {
@@ -72,4 +73,27 @@ void Student::printAll() const // outputs all of the students classes and their 
 string Student::getName() const // allows program to aquire the students name 
 {
     return name;
+}
+
+int Student::getNumclasses() const // gives number of classes that a student has
+{
+    return num_classes;
+}
+
+int main() // tests classes and functions to work with students information
+{
+    Student a; 
+    a.printAll();
+    Student b("Becky", 5);
+    b.printAll();
+    Student c(b);
+    c.printAll();
+    c.resetClass();
+    cout << c.getNumclasses() << endl;
+    c.inputClass("Carl", 3);
+    cout << c.getName() << " now has " << c.getNumclasses() << " classes" << endl;
+    a = c;
+    a.printAll();
+    
+    return 0;
 }
