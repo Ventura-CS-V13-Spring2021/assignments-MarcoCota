@@ -32,7 +32,7 @@ Student::~Student()
 
 Student &Student::operator=(Student &rhs)
 {
-    name = rhs.name;
+    name = rhs.name; // allows information to be moved from a student to a new variable 
     num_classes = rhs.num_classes;
     class_list = new string[num_classes];
     for (int i = 0; i < num_classes; i++)
@@ -41,5 +41,13 @@ Student &Student::operator=(Student &rhs)
     }
 }
 
-void Student::inputClass(string n, int num)
+void Student::inputClass(string n, int num) 
 {
+  name = n;
+    num_classes = num;
+    class_list = new string[num];
+    for (int i = 0; i < num_classes; i++)
+    {
+        cout << class_list[i] << endl;
+    }
+}
