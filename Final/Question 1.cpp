@@ -9,6 +9,22 @@ int getNumDiv(int i);
 
 int main()
 {
+    int num, largest_num = 0, result; 
+    for (int i = 0; i < N; i++) // goes through each element in array starting from 0
+    {
+        num = getNumDiv(i); // gives you amount of possible divisible counts for each integer in the array
+        if (num > largest_num)
+        {
+            largest_num = num; 
+            result = array[i];
+        }
+    }
+    
+    cout << "Largest Divisible Integer: " << result << endl;
+    
+    return 0;
+}
+
 
 int getNumDiv(int i)
 {
