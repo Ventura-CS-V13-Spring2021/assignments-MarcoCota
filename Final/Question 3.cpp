@@ -37,28 +37,39 @@ Student &Student::operator=(Student &rhs)
     class_list = new string[num_classes];
     for (int i = 0; i < num_classes; i++)
     {
-        class_list[i] = rhs.class_list[i];
+        class_list[i] = rhs.class_list[i]; // coppies students class list 
     }
 }
 
-void Student::inputClass(string n, int num)
+void Student::inputClass(string n, int num) // allows new values to be added to the student
 {
     name = n;
     num_classes = num;
     class_list = new string[num];
-    for (int i = 0; i < num_classes; i++)
+    for (int i = 0; i < num_classes; i++) // aska user for their new classes
     {
         cout << "Enter the course name : ";
         cin >> class_list[i];
     }
 }
 
-void Student::resetClass()
+void Student::resetClass() // resets the number of students classes to zero
 {
     num_classes = 0;
     delete[] class_list;
     class_list = NULL;
 }
 
-void Student::printAll() const
+void Student::printAll() const // outputs all of the students classes and their name 
 {
+  cout << "Student Name: " << name << endl;
+    for (int i = 0; i < num_classes; i++)
+    {
+        cout << class_list[i] << endl;
+    }
+}
+
+string Student::getName() const // allows program to aquire the students name 
+{
+    return name;
+}
